@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:assigment4/home_page.dart';
+import 'package:assigment4/register_page.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -8,8 +9,28 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void initState(){
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final _formKey = GlobalKey<FormState>();
+    return Scaffold(
+      body: Form(
+        key: _formKey,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              
+            ],
+          ),)),
+    );
   }
 }
