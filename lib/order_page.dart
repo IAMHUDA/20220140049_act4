@@ -43,6 +43,16 @@ class _OrderPageState extends State<OrderPage> {
                 return null;
               },
             ),
+            TextFormField(
+              controller: minumanController,
+              decoration: const InputDecoration(labelText: 'Drink Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'please enter your Drink order';
+                }
+                return null;
+              },
+            ),
 
 ],
         )),
