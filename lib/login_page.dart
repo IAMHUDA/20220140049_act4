@@ -28,7 +28,16 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
+              TextFormField(
+                controller: emailController,
+                decoration: const InputDecoration(labelText: 'Email'),
+                validator: (value){
+                  if(value == null || value.isEmpty){
+                    return 'please enter your email';
+                  }
+                  return null;
+                },
+              ),
             ],
           ),)),
     );
