@@ -33,6 +33,17 @@ class _OrderPageState extends State<OrderPage> {
         child: Column(
           spacing: 16,
           children: [
+            TextFormField(
+              controller: makananController,
+              decoration: const InputDecoration(labelText: 'Food Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'please enter your food order';
+                }
+                return null;
+              },
+            ),
+
 ],
         )),
     );
